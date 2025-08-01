@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Invest for Their Future | NestFund Financial</title>
+  <title>NestFund Financial | Invest for Their Future</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -27,15 +27,14 @@
     h1, h2 {
       margin-bottom: 1rem;
     }
-    form {
+    form, .calc-container {
       margin-top: 2rem;
       padding: 1rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       background: #fff;
     }
-    input[type="text"],
-    input[type="email"] {
+    input[type="text"], input[type="email"], input[type="number"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -58,9 +57,6 @@
       font-size: 0.9rem;
       color: #888;
     }
-    @media (max-width: 600px) {
-      section { padding: 0 1rem; }
-    }
   </style>
 </head>
 <body>
@@ -71,10 +67,63 @@
 </header>
 
 <section>
-  <h2>Start Building Generational Wealth</h2>
-  <p>NestFund gives you the tools to stop the cycle and give your kids a financial head start. Whether you're eligible for the new 2025 Trump Accounts or just getting started with a 529 or UTMA, we help you understand your options and take action.</p>
+  <h2>What’s a Trump Account?</h2>
+  <p>Starting in 2025, certain newborns qualify for a special investment account — unofficially called a Trump Account — backed by the S&P 500 and federally supported.</p>
+  <ul>
+    <li>📈 Grows tax-free like a 529 plan</li>
+    <li>🔒 Withdrawals allowed after age 18</li>
+    <li>👪 Anyone can contribute: parents, family, friends</li>
+  </ul>
 
-  <h2>Join the Waitlist + Get the Starter Guide</h2>
+  <h2>What If I Don’t Qualify?</h2>
+  <p>If your child was born before 2025, you still have strong options:</p>
+  <ul>
+    <li>✅ 529 Plan — for education expenses</li>
+    <li>✅ Custodial Roth IRA — if your child has earned income</li>
+    <li>✅ UTMA/UGMA Account — flexible investing, fewer rules</li>
+  </ul>
+
+  <h2>Investment Growth Calculator</h2>
+  <div class="calc-container">
+    <label for="age">Child’s Current Age:</label>
+    <input type="number" id="age" min="0" max="17" placeholder="e.g. 2">
+    <label for="weekly">Weekly Contribution ($):</label>
+    <input type="number" id="weekly" min="1" placeholder="e.g. 25">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result18"></p>
+    <p id="result30"></p>
+  </div>
+
+  <script>
+    function calculate() {
+      const age = parseInt(document.getElementById("age").value);
+      const weekly = parseFloat(document.getElementById("weekly").value);
+      const rate = 0.07;
+      const weeksPerYear = 52;
+
+      if (isNaN(age) || isNaN(weekly) || age < 0 || age > 17) {
+        document.getElementById("result18").innerText = "Please enter a valid age (0–17) and amount.";
+        document.getElementById("result30").innerText = "";
+        return;
+      }
+
+      const yearsTo18 = 18 - age;
+      const yearsTo30 = 30 - age;
+      const annual = weekly * weeksPerYear;
+
+      function futureValue(P, r, n) {
+        return P * (((Math.pow(1 + r, n) - 1) / r));
+      }
+
+      const fv18 = futureValue(annual, rate, yearsTo18);
+      const fv30 = futureValue(annual, rate, yearsTo30);
+
+      document.getElementById("result18").innerText = `At age 18: ~$${fv18.toFixed(2)}`;
+      document.getElementById("result30").innerText = `At age 30: ~$${fv30.toFixed(2)}`;
+    }
+  </script>
+
+  <h2>Get the Starter Guide</h2>
   <form action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" method="POST" target="_blank">
     <input type="email" name="CONTACT_EMAIL" placeholder="Your email address" required>
     <input type="text" name="LASTNAME" placeholder="Your name (optional)">
