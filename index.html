@@ -1,155 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NestFund Financial | Invest for Their Future</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #0077cc;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    section {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h1, h2 {
-      margin-bottom: 1rem;
-    }
-    form, .calc-container {
-      margin-top: 2rem;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      background: #fff;
-    }
-    input[type="text"], input[type="email"], input[type="number"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    button {
-      background: #0077cc;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    footer {
-      text-align: center;
-      margin: 4rem 0 2rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NestFund Financial</title>
 </head>
 <body>
-
-<header>
-  <h1>NestFund Financial</h1>
-  <p>Wealth Starts at Birth.</p>
-</header>
-  
-<section>
-  <h2>Why This Matters</h2>
-  <p>You probably didn’t grow up with financial literacy — neither did we. NestFund exists to break that cycle. We help parents take simple, consistent action to build real wealth for their kids, starting as early as birth. No jargon. No pressure. Just real tools to help you give your kids a financial head start — and teach them how to carry it forward.</p>
-</section>
-  
-<section>
-  <h2>What’s a Trump Account?</h2>
-  <p>Starting in 2025, certain newborns qualify for a special investment account — unofficially called a Trump Account — backed by the S&P 500 and federally supported.</p>
-  <ul>
-    <li>📈 Grows tax-free like a 529 plan</li>
-    <li>🔒 Withdrawals allowed after age 18</li>
-    <li>👪 Anyone can contribute: parents, family, friends</li>
-  </ul>
-
-  <h2>What If I Don’t Qualify?</h2>
-  <p>If your child was born before 2025, you still have strong options:</p>
-  <ul>
-    <li>✅ 529 Plan — for education expenses</li>
-    <li>✅ Custodial Roth IRA — if your child has earned income</li>
-    <li>✅ UTMA/UGMA Account — flexible investing, fewer rules</li>
-  </ul>
-
-  <h2>Investment Growth Calculator</h2>
-  <div class="calc-container">
-    <label for="age">Child’s Current Age:</label>
-    <input type="number" id="age" min="0" max="17" placeholder="e.g. 2">
-    <label for="weekly">Weekly Contribution ($):</label>
-    <input type="number" id="weekly" min="1" placeholder="e.g. 25">
-    <button onclick="calculate()">Calculate</button>
-    <p id="result18"></p>
-    <p id="result30"></p>
-  </div>
-
-  <script>
-    function calculate() {
-      const age = parseInt(document.getElementById("age").value);
-      const weekly = parseFloat(document.getElementById("weekly").value);
-      const rate = 0.07;
-      const weeksPerYear = 52;
-
-      if (isNaN(age) || isNaN(weekly) || age < 0 || age > 17) {
-        document.getElementById("result18").innerText = "Please enter a valid age (0–17) and amount.";
-        document.getElementById("result30").innerText = "";
-        return;
-      }
-
-      const yearsTo18 = 18 - age;
-      const yearsTo30 = 30 - age;
-      const annual = weekly * weeksPerYear;
-
-      function futureValue(P, r, n) {
-        return P * (((Math.pow(1 + r, n) - 1) / r));
-      }
-
-      const fv18 = futureValue(annual, rate, yearsTo18);
-      const fv30 = futureValue(annual, rate, yearsTo30);
-
-      document.getElementById("result18").innerText = `At age 18: ~$${fv18.toFixed(2)}`;
-      document.getElementById("result30").innerText = `At age 30: ~$${fv30.toFixed(2)}`;
-    }
-  </script>
-
-  <h2>Get the Starter Guide</h2>
-  <form action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" method="POST" target="_blank">
-    <input type="email" name="CONTACT_EMAIL" placeholder="Your email address" required>
-    <input type="text" name="LASTNAME" placeholder="Your name (optional)">
-    <input type="hidden" name="LI" value="114a29ac57e1247a9">
-    <input type="hidden" name="zx" value="1354a3160">
-    <input type="hidden" name="zcld" value="114a29ac57e124986">
-    <input type="hidden" name="submitType" value="optinCustomView">
-    <input type="hidden" name="formType" value="QuickForm">
-    <input type="hidden" name="zcvers" value="3.0">
-    <input type="hidden" name="mode" value="OptinCreateView">
-    <input type="hidden" name="zctd" value="114a29ac57e1247a9">
-    <input type="hidden" name="zc_trackCode" value="ZCFORMVIEW">
-    <input type="hidden" name="zc_formIx" value="3z06c7172f9e008e930281383c7ecdfb97a38d649e7de01d0cf1a5e34033b8a434">
-    <input type="hidden" name="viewFrom" value="URL_ACTION">
-    <button type="submit">Send Me the Guide</button>
-  </form>
-</section>
-
-<footer>
-  &copy; 2025 NestFund Financial. All rights reserved.
-</footer>
-
+    <h1>Start Building Wealth from Day One — Even If You Never Learned How</h1>
+    <section>
+        <h2>Why This Matters</h2>
+        <p>Most of us didn’t grow up with financial literacy... [Content trimmed]</p>
+    </section>
+    <section>
+        <h2>What’s a One Grand Account?</h2>
+        <p>Starting in 2025, qualifying newborns will receive a federally seeded $1,000 investment account... [Content trimmed]</p>
+    </section>
+    <section>
+        <h2>What If I Don’t Qualify?</h2>
+        <p>If your child was born before 2025 or doesn’t meet the income requirement — it’s not too late... [Content trimmed]</p>
+    </section>
+    <section>
+        <h2>What Does $25 a Week Actually Do?</h2>
+        <pre>
+Age Started  | Age 18 Balance | Age 60 Balance (Rolled to IRA)
+-------------|----------------|-------------------------------
+Newborn      | $27,395        | $318,742
+Age 5        | $17,411        | $202,576
+Age 10       | $9,735         | $113,280
+Age 15       | $3,778         | $43,975
+        </pre>
+    </section>
+    <section>
+        <h2>What Does Tax-Deferred Mean?</h2>
+        <p>Tax-deferred means your money grows without being taxed every year... [Content trimmed]</p>
+    </section>
+    <section>
+        <h2>What We’re Building</h2>
+        <p>NestFund is not a bank, and we’re not here to sell you anything... [Content trimmed]</p>
+    </section>
+    <section>
+        <h2>Get Started</h2>
+        <p>Join our newsletter... [Zoho form embed placeholder]</p>
+    </section>
 </body>
 </html>
