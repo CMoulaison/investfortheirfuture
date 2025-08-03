@@ -1,1 +1,60 @@
-body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; } h1 { color: #2E5AAC; } section { margin-bottom: 2em; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f9f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+header {
+    background: #2e5aac;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+.subtitle {
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+h1, h2, h3 {
+    margin-bottom: 0.5rem;
+}
+main section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+}
+ul {
+    padding-left: 1.2rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.cta {
+    background: #eef1f7;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.form-placeholder {
+    background: #dce3f1;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+footer {
+    background: #1e396d;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
