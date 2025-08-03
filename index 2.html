@@ -4,29 +4,74 @@
 <head>
   <meta charset="UTF-8" />
   <title>NestFund Financial – Join the Movement</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
-    .container {
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header, footer {
+      background-color: #0a326c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    header p { font-size: 1.2rem; margin-top: 0.3rem; color: #cddbf6; }
+    section {
       max-width: 700px;
-      margin: auto;
+      margin: 2rem auto;
       background: white;
       padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    h1 {
-      color: #0a326c;
-      text-align: center;
-      margin-bottom: 1rem;
+    h1, h2 { color: #0a326c; }
+    form input[type="text"], form input[type="email"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #4886ff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #1d64f2;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Join Our Movement</h1>
-    <p style="text-align:center;">Sign up to get our starter guide, tools, and weekly tips.</p>
-    <iframe src="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc?zc_formIx=3z06c7172f9e008e930281383c7ecdfb97a38d649e7de01d0cf1a5e34033b8a434&mode=OptinCreateView" width="100%" height="320" style="border:none;"></iframe>
-  </div>
+
+<header>
+  <h1>investfortheirfuture.com</h1>
+  <p>Wealth starts at birth.</p>
+</header>
+
+<section>
+  <h2>Join the Movement</h2>
+  <p>Sign up below to get our Starter Guide, future tools, and weekly tips.</p>
+  <form method="POST" action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" target="_blank">
+    <input type="email" name="CONTACT_EMAIL" placeholder="Email Address" required>
+    <input type="text" name="LASTNAME" placeholder="Name (optional)">
+    <input type="hidden" name="submitType" value="optinCustomView">
+    <input type="hidden" name="formType" value="QuickForm">
+    <input type="hidden" name="zx" value="1354a3160">
+    <input type="hidden" name="zcvers" value="3.0">
+    <input type="hidden" name="zcld" value="114a29ac57e124986">
+    <input type="hidden" name="zctd" value="114a29ac57e1247a9">
+    <input type="hidden" name="zc_trackCode" value="ZCFORMVIEW">
+    <input type="hidden" name="zc_formIx" value="3z06c7172f9e008e930281383c7ecdfb97a38d649e7de01d0cf1a5e34033b8a434">
+    <button type="submit">Join Now</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 NestFund Financial. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
