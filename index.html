@@ -1,150 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="NestFund Financial helps parents build generational wealth through early investment tools, including the new tax-deferred One Grand Accounts." />
   <title>NestFund Financial</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #0a326c;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin: 0.25rem 0 0;
-      color: #cddbf6;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    h1, h2 {
-      color: #0a326c;
-    }
-
-    .calculator {
-      background: #f0f4f8;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1rem;
-    }
-
-    .email-signup {
-      background: #eef2f7;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 2rem;
-    }
-
-    footer {
-      background: #0a326c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    .zoho-form-container {
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      section {
-        margin: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-  <h1>investfortheirfuture.com</h1>
-  <p>Wealth starts at birth.</p>
-</header>
-
-<section>
-  <h2>Why This Matters</h2>
-  <p>I didn’t grow up with financial literacy. My parents didn’t either — and I passed that blind spot down to my kids. But now I’ve got a granddaughter… and I’m drawing a line in the sand.</p>
-  <p><strong>NestFund Financial</strong> is about breaking that cycle. We help parents start early, grow wealth steadily, and raise kids who understand money by the time they become adults.</p>
-</section>
-
-<section>
-  <h2>What is a One Grand Account?</h2>
-  <p>Starting January 1, 2025, eligible newborns will receive $1,000 in a federally-backed, tax-deferred investment account tied to the S&P 500. These are called <strong>One Grand Accounts</strong>.</p>
-  <ul>
-    <li>✅ $1,000 initial deposit (if eligible)</li>
-    <li>✅ Tax-deferred growth</li>
-    <li>✅ Cannot be withdrawn until age 18</li>
-    <li>✅ Transferable into a Traditional IRA, Roth IRA, or other approved account at 18</li>
-    <li>✅ Anyone can contribute: parents, grandparents, friends</li>
-  </ul>
-  <p><strong>Note:</strong> Tax-deferred means you don’t pay taxes on gains until withdrawal — giving you more time to compound growth.</p>
-</section>
-
-<section>
-  <h2>What If My Kid Was Born Before 2025?</h2>
-  <p>You can still build wealth — starting now. Here are smart, time-tested options:</p>
-  <ul>
-    <li>✅ <strong>529 Plans</strong> – for college and education savings</li>
-    <li>✅ <strong>Custodial Roth IRA</strong> – if your child has earned income</li>
-    <li>✅ <strong>UTMA/UGMA Accounts</strong> – broad investment options, fewer rules</li>
-  </ul>
-  <p>We'll walk you through each option in future emails.</p>
-</section>
-
-<section class="calculator">
-  <h2>What Can $25 a Week Grow Into?</h2>
-  <p>With a 7% average annual return:</p>
-  <ul>
-    <li>👶 Start at birth → <strong>$27,395 at 18</strong> | <strong>$140,407 at 60</strong></li>
-    <li>👦 Start at age 5 → <strong>$17,411 at 18</strong> | <strong>$95,378 at 60</strong></li>
-    <li>👧 Start at age 10 → <strong>$9,735 at 18</strong> | <strong>$58,929 at 60</strong></li>
-    <li>👱 Start at age 15 → <strong>$3,778 at 18</strong> | <strong>$23,109 at 60</strong></li>
-  </ul>
-  <p>📈 Every year counts. Start where you are and stay consistent.</p>
-</section>
-
-<section class="email-signup">
-  <h2>Join the Movement</h2>
-  <p>Sign up below to get our Starter Guide, future tools, and weekly tips.</p>
-  <form method="POST" action="https://zcsub-cmpzourl.maillist-manage.com/weboptin.zc" target="_blank">
-    <input type="email" name="CONTACT_EMAIL" placeholder="Email Address" required>
-    <input type="text" name="LASTNAME" placeholder="Name (optional)">
-    <input type="hidden" name="submitType" value="optinCustomView">
-    <input type="hidden" name="formType" value="QuickForm">
-    <input type="hidden" name="zx" value="1354a3160">
-    <input type="hidden" name="zcvers" value="3.0">
-    <input type="hidden" name="zcld" value="114a29ac57e124986">
-    <input type="hidden" name="zctd" value="114a29ac57e1247a9">
-    <input type="hidden" name="zc_trackCode" value="ZCFORMVIEW">
-    <input type="hidden" name="zc_formIx" value="3z06c7172f9e008e930281383c7ecdfb97a38d649e7de01d0cf1a5e34033b8a434">
-    <button type="submit">Join Now</button>
-  </form>    
-</section>
-
-<footer>
-  <p>© 2025 NestFund Financial. All rights reserved.</p>
-</footer>
-
+  <header>
+    <div class="logo">NestFund Financial</div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-button-container" for="menu-toggle">
+      <div class="menu-button"></div>
+    </label>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Getting Started</a>
+      <a href="#">Tools & Guides</a>
+      <a href="#">Glossary</a>
+      <a href="#">About</a>
+      <a href="#">Connect</a>
+      <a href="#">Legal</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Wealth Starts at Birth</h1>
+      <p>Give your child a 20-year financial head start. No experience needed.</p>
+      <a class="cta" href="#">Get the Free Starter Guide</a>
+    </section>
+    <section class="grid">
+      <div class="card">
+        <h2>One Grand Accounts</h2>
+        <p>Eligible if born on or after Jan 1, 2025. Tax-deferred growth until age 18, then options to roll into a Traditional IRA or use with a plan.</p>
+        <a class="link" href="#">Learn more</a>
+      </div>
+      <div class="card">
+        <h2>529 Plans</h2>
+        <p>Education-focused investing with state-level advantages. Start with Washington’s DreamAhead or GET.</p>
+        <a class="link" href="#">Compare WA plans</a>
+      </div>
+      <div class="card">
+        <h2>Custodial Accounts</h2>
+        <p>UTMA and Roth IRA for minors. Flexible ways to invest for kids with or without earned income.</p>
+        <a class="link" href="#">See options</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-cols">
+      <div>
+        <h4>NestFund</h4>
+        <p>Real-world guides for building generational wealth.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Glossary</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay in the loop</h4>
+        <form>
+          <input type="email" placeholder="you@example.com" />
+          <button type="button">Join</button>
+        </form>
+      </div>
+    </div>
+    <p class="copyright">© 2025 NestFund Financial</p>
+  </footer>
 </body>
 </html>
