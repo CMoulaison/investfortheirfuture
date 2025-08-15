@@ -1,0 +1,8 @@
+/* Placeholder — BRAND to fill in */
+.page { max-width: 880px; margin: 0 auto; padding: 24px; }
+.page-hero { margin-bottom: 24px; }
+.tagline { opacity: 0.9; }
+.toc a { margin-right: 12px; display: inline-block; }
+.button { padding: 10px 16px; border: 1px solid #000; text-decoration: none; }
+.chart-placeholder { height: 200px; border: 1px dashed #777; display: flex; align-items: center; justify-content: center; }
+.page-disclaimer { margin-top: 24px; font-size: 0.9rem; opacity: 0.9; }
