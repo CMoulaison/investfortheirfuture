@@ -1,1 +1,47 @@
-/* Placeholder — BRAND to fill in */
+/* NestFund Typography */
+:root {
+  --font-base: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-size-100: 0.875rem;   /* 14 */
+  --font-size-200: 1rem;       /* 16 */
+  --font-size-300: 1.125rem;   /* 18 */
+  --font-size-400: 1.25rem;    /* 20 */
+  --font-size-500: 1.5rem;     /* 24 */
+  --font-size-600: 2rem;       /* 32 */
+  --line: 1.5;
+}
+
+html { font-family: var(--font-base); font-size: 16px; }
+body { font-size: var(--font-size-200); line-height: var(--line); color: #111; }
+
+h1 { font-size: var(--font-size-600); line-height: 1.2; margin: 0 0 0.5rem; font-weight: 700; }
+h2 { font-size: var(--font-size-500); line-height: 1.25; margin: 2rem 0 0.5rem; font-weight: 700; }
+h3 { font-size: var(--font-size-400); line-height: 1.25; margin: 1.5rem 0 0.5rem; font-weight: 700; }
+h4 { font-size: var(--font-size-300); line-height: 1.25; margin: 1rem 0 0.5rem; font-weight: 600; }
+
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem 1.25rem; }
+li { margin: 0.25rem 0; }
+
+a { color: #0a66c2; text-decoration: underline; }
+a:hover, a:focus { text-decoration: none; }
+
+small { font-size: var(--font-size-100); color: #444; }
+
+.button, .btn {
+  display: inline-block;
+  padding: 0.625rem 1rem;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.button.secondary, .btn.secondary {
+  background: #fff;
+  color: #111;
+}
+
+.page-header p { font-size: var(--font-size-300); color: #222; }
+.disclaimer { margin-top: 2rem; padding: 1rem; border-top: 1px solid #e5e5e5; color: #444; font-size: var(--font-size-100); }
