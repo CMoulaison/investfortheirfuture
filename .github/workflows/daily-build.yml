@@ -1,0 +1,50 @@
+name: Daily Website Update (PR + Preview)
+
+on:
+  schedule:
+    # 3:45 AM Pacific = 10:45 UTC (adjust if your time zone changes)
+    - cron: "45 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prepare-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # (Optional) Basic link check to catch obvious 404s in content folders
+      - name: Link check
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          args: --no-progress --exclude-mail --max-redirects 4 site/ design/ marketing/
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true  # don't block PRs, just report
+
+      # If your GPT/staff has already pushed new/updated files to this branch,
+      # the next step will open (or update) a PR with a Vercel preview.
+
+      - name: Create or update PR
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/daily-website-update
+          title: "Daily Website Update – ${{ github.run_id }}"
+          body: |
+            Automated daily website update.
+            - Link check run: see workflow logs
+            - Please review the Vercel preview before merge.
+          commit-message: "chore: daily website update"
+          labels: automated, daily
+          signoff: true
+
+      - name: No changes note
+        if: steps.cpr.outputs.pull-request-number == ''
+        run: echo "No file changes detected; no PR opened today."
