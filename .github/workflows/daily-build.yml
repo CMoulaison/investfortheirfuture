@@ -25,7 +25,7 @@ jobs:
         with:
           args: --no-progress --exclude-mail --max-redirects 4 site/ design/ marketing/
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         continue-on-error: true  # don't block PRs, just report
 
       # If your GPT/staff has already pushed new/updated files to this branch,
