@@ -1,0 +1,29 @@
+name: Smoke Test PR
+on:
+  workflow_dispatch: {}      # manual run button
+  schedule:
+    - cron: '10 4 * * *'     # 4:10 UTC daily (change if you want)
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create proof file
+        run: |
+          mkdir -p reports
+          echo "Automation is working: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" > reports/_automation_works.txt
+
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: feature/smoke-${{ github.run_id }}
+          title: "Automation Smoke Test – ${{ github.run_id }}"
+          commit-message: "[AUTO] Smoke test file"
+          body: "This PR proves Actions can create a file and open a PR. Vercel preview should appear below."
+          draft: true
+          delete-branch: true
