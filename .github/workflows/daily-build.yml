@@ -1,51 +1,55 @@
-name: Daily Website Update (PR + Preview)
+name: Daily Website Update (PR from feature)
 
 on:
   schedule:
-    # 3:45 AM Pacific = 10:45 UTC (adjust if your time zone changes)
-    - cron: "45 10 * * *"
+    - cron: "45 10 * * *"   # 3:45 AM Pacific = 10:45 UTC
   workflow_dispatch: {}
 
 permissions:
   contents: write
   pull-requests: write
-  issues: write
-  
+
 jobs:
   prepare-pr:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
-      # (Optional) Basic link check to catch obvious 404s in content folders
-      - name: Link check
-        uses: lycheeverse/lychee-action@v1.9.0
-        with:
-          args: --no-progress --exclude-mail --max-redirects 4 site/ design/ marketing/
+      - name: Configure git
+        run: |
+          git config user.name "nestfund-bot"
+          git config user.email "bot@nestfund.local"
+
+      - name: Fetch all branches
+        run: git fetch --all --prune
+
+      - name: Merge feature into PR branch
         env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-        continue-on-error: true  # don't block PRs, just report
+          FEATURE_BRANCH: CMoulaison-patch-2   # <-- CHANGE to your branch with edits
+        run: |
+          git checkout -B auto/daily-website-update
+          if git merge --no-ff "origin/${FEATURE_BRANCH}" -m "Auto-merge ${FEATURE_BRANCH} into auto/daily"; then
+            echo "Merge OK"
+          else
+            echo "Merge conflict. Resolve in repo and re-run."; exit 1
+          fi
 
-      # If your GPT/staff has already pushed new/updated files to this branch,
-      # the next step will open (or update) a PR with a Vercel preview.
+      - name: Show changed files (debug)
+        run: |
+          echo "Last commit:" && git --no-pager log -1 --oneline
+          echo "Changed files:" && git diff --name-only HEAD~1..HEAD || true
 
-      - name: Create or update PR
-        id: cpr
+      - name: Create PR
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: auto/daily-website-update
           title: "Daily Website Update – ${{ github.run_id }}"
+          branch: auto/daily-website-update   # source
+          base: main                          # target
+          draft: true
           body: |
-            Automated daily website update.
-            - Link check run: see workflow logs
-            - Please review the Vercel preview before merge.
-          commit-message: "chore: daily website update"
-          labels: automated, daily
-          signoff: true
-
-      - name: No changes note
-        if: steps.cpr.outputs.pull-request-number == ''
-        run: echo "No file changes detected; no PR opened today."
+            Auto-PR from feature branch into main.
+            See Action logs for the changed files list.
