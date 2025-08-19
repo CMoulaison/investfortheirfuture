@@ -29,7 +29,7 @@ jobs:
 
       - name: Merge feature into PR branch
         env:
-          FEATURE_BRANCH: CMoulaison-patch-2   # <-- CHANGE to your branch with edits
+          FEATURE_BRANCH:  feature/day-07-subpages-calculator-grants   # <-- CHANGE to your branch with edits
         run: |
           git checkout -B auto/daily-website-update
           if git merge --no-ff "origin/${FEATURE_BRANCH}" -m "Auto-merge ${FEATURE_BRANCH} into auto/daily"; then
