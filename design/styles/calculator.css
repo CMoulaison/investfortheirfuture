@@ -1,0 +1,1 @@
+.calc-card{border:1px solid var(--nf-border);border-radius:10px;padding:1rem;background:#fff;box-shadow:var(--shadow)}.calc-grid{display:grid;gap:1rem;grid-template-columns:1fr}@media(min-width:680px){.calc-grid{grid-template-columns:1fr 1fr}}.result-card{border:1px solid var(--nf-border);border-radius:10px;padding:.75rem;background:#fff}.value{font-size:1.6rem;font-weight:800}
