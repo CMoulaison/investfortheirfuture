@@ -3,42 +3,57 @@
 <title>About • NestFund</title>
 <link rel="stylesheet" href="/design/styles/theme.css">
 <link rel="stylesheet" href="/design/styles/calculator.css">
-</head><body>
+</head><body class="tap-large">
 
 <header class="header">
   <div class="container nav">
-    <a href="/index.html" class="logo"><span class="dot"></span> NestFund</a>
-    <nav class="menu">
-      <a href="/site/pages/one-grand-accounts.html">OGAs</a>
-      <a href="/site/pages/529-plans.html">529</a>
+    <a href="/index.html" class="logo" aria-label="NestFund home"><span class="dot"></span> NestFund</a>
+    <nav class="menu" aria-label="Main">
+      <a href="/site/pages/one-grand-account.html">One Grand Account</a>
+      <a href="/site/pages/529-plans.html">529 Plans</a>
       <a href="/site/pages/custodial-accounts.html">Custodial</a>
       <a href="/site/pages/glossary.html">Glossary</a>
       <a href="/site/pages/about.html">About</a>
       <a href="/site/pages/contact.html">Contact</a>
     </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu"><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/site/pages/one-grand-account.html">One Grand Account</a>
+    <a href="/site/pages/529-plans.html">529 Plans</a>
+    <a href="/site/pages/custodial-accounts.html">Custodial</a>
+    <a href="/site/pages/glossary.html">Glossary</a>
+    <a href="/site/pages/about.html">About</a>
+    <a href="/site/pages/contact.html">Contact</a>
   </div>
 </header>
+<script>
+  (function(){
+    var b=document.getElementById('burger');
+    var root=document.documentElement;
+    if(!b) return;
+    b.addEventListener('click',function(){ root.classList.toggle('mobile-open'); });
+  })();
+</script>
 
 
 <section class="section">
   <div class="container grid two">
     <div>
       <span class="kicker">Our story</span>
-      <h1>A real life path to building wealth for kids</h1>
-      <p>I became a dad at seventeen. My girlfriend, now my wife, was pregnant, and I dropped out halfway through my senior year of high school to go to work. That was what my parents did, and it was what I knew. They ran their own businesses, but they never taught me how to handle money. So, like a lot of people, I worked hard, lived paycheck to paycheck, and hoped things would work out.</p>
-      <p>I am 43 now. I have been driving for Waste Management for 23 years, and I will have a pension when I retire. That is something, but I never invested in my 401k or planned for the future the way I could have. I did not think about it. I did not teach my kids about it either. Both of them went to college, the first in my family to do so, and I am carrying over one hundred thousand dollars in Parent PLUS loans because of it.</p>
-      <p>Then my granddaughter was born in January 2025. Around that same time, One Grand Accounts became available. It hit me hard. I could have done so much more to set myself and my kids up for success. I could not go back, but I could make sure she, and every kid like her, did not have to start at zero.</p>
-      <p>That is why I built NestFund Financial. Not as a fancy app or sales pitch, but as a place for real families to learn, plan, and take action. A place where parents can manage their child’s One Grand Account, a 529, or a custodial account in one spot. A place that explains things simply and shows what is possible over 18 years, 30 years, and 60 years.</p>
-      <p>I have worked hard my whole life. But hard work alone does not build generational wealth. Planning, saving, and teaching do. My mission is simple. Give every parent, whether you know finance or not, the tools to set your kids and grandkids up for success.</p>
+      <h1>Learning together, building for the next generation</h1>
+      <p>I became a dad at seventeen and went straight to work. I did not learn how to build wealth, and I did not teach it. When my granddaughter was born and One Grand Accounts launched, I realized I needed to change that — for my family and for others like us.</p>
+      <p>NestFund is my way of learning out loud. I am studying One Grand Accounts, 529s, and custodial accounts and sharing what I learn in plain language so real families can take action. This is not Wall Street. It is a working dad and grandpa figuring it out with you.</p>
+      <p>If you have ever thought, “I wish someone taught me this sooner,” you are in the right place. Let us learn and grow together.</p>
     </div>
     <div class="card">
       <h3>What you can do today</h3>
       <ol>
-        <li>Read the Starter Guide. Five minutes.</li>
-        <li>Pick one account type that fits your family.</li>
+        <li>Get the free Starter Guide and email course.</li>
+        <li>Pick one account to start.</li>
         <li>Automate a weekly deposit, even ten dollars.</li>
       </ol>
-      <a class="button" href="/starter-guide.pdf">Download the Starter Guide</a>
+      <a class="button" href="/starter-guide.pdf">Get the Starter Guide</a>
     </div>
   </div>
 </section>
