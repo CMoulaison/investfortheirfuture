@@ -1,0 +1,29 @@
+<form id="oga-calc-form" class="calc-card" novalidate>
+  <div class="calc-grid">
+    <label>Weekly contribution ($)<br><input id="weekly" type="number" min="0" step="1" value="50"></label>
+    <label>Annual return (%)<br><input id="rate" type="number" min="0" step="0.1" value="7"></label>
+    <label><input id="seed" type="checkbox"> Include $1,000 seed</label>
+    <label><input id="cap" type="checkbox"> Enforce $5,000/yr cap</label>
+  </div>
+  <div class="calc-actions" style="margin:.75rem 0">
+    <button id="btn-reset" type="button" class="btn secondary">Reset</button>
+  </div>
+  <div class="calc-results">
+    <h3>Projected value</h3>
+    <div class="result-cards">
+      <div class="card">
+        <h4>Age 18</h4>
+        <p class="value" id="age18-value">$0.00</p>
+        <p class="sub"><span>Contributions:</span> <span id="age18-contrib">$0.00</span></p>
+        <p class="sub"><span>Growth:</span> <span id="age18-growth">$0.00</span></p>
+      </div>
+      <div class="card">
+        <h4>Age 60</h4>
+        <p class="value" id="age60-value">$0.00</p>
+        <p class="sub"><span>Contributions:</span> <span id="age60-contrib">$0.00</span></p>
+        <p class="sub"><span>Growth:</span> <span id="age60-growth">$0.00</span></p>
+      </div>
+    </div>
+    <p class="calc-note" id="summary-totals"></p>
+  </div>
+</form>
