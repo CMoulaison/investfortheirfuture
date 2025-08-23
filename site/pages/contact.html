@@ -1,73 +1,61 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact • NestFund</title>
-<link rel="stylesheet" href="/design/styles/theme.css">
-<link rel="stylesheet" href="/design/styles/calculator.css">
-</head><body class="tap-large">
-
-<header class="header">
-  <div class="container nav">
-    <a href="/index.html" class="logo" aria-label="NestFund home"><span class="dot"></span> NestFund</a>
-    <nav class="menu" aria-label="Main">
-      <a href="/site/pages/one-grand-account.html">One Grand Account</a>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact · NestFund Financial</title>
+<link rel="stylesheet" href="/design/styles/typography.css">
+<link rel="stylesheet" href="/design/styles/layout-subpage.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/"><strong>NestFund</strong></a>
+    <nav aria-label="Main">
+      <a href="/site/pages/one-grand-accounts.html">One Grand Accounts</a>
       <a href="/site/pages/529-plans.html">529 Plans</a>
       <a href="/site/pages/custodial-accounts.html">Custodial</a>
-      <a href="/site/pages/glossary.html">Glossary</a>
       <a href="/site/pages/about.html">About</a>
       <a href="/site/pages/contact.html">Contact</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Toggle menu"><span></span></button>
-  </div>
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="/site/pages/one-grand-account.html">One Grand Account</a>
-    <a href="/site/pages/529-plans.html">529 Plans</a>
-    <a href="/site/pages/custodial-accounts.html">Custodial</a>
-    <a href="/site/pages/glossary.html">Glossary</a>
-    <a href="/site/pages/about.html">About</a>
-    <a href="/site/pages/contact.html">Contact</a>
   </div>
 </header>
-<script>
-  (function(){
-    var b=document.getElementById('burger');
-    var root=document.documentElement;
-    if(!b) return;
-    b.addEventListener('click',function(){ root.classList.toggle('mobile-open'); });
-  })();
-</script>
 
-
-<section class="section">
-  <div class="container grid two">
-    <div>
-      <h1>Contact</h1>
-      <p>Questions or partnership ideas? Send a message. We read everything.</p>
-      <form class="form" action="mailto:info@investfortheirfuture.com" method="post" enctype="text/plain">
-        <input class="input" type="text" name="name" placeholder="Your name" required>
-        <input class="input" type="email" name="email" placeholder="Your email" required>
-        <textarea class="input" name="message" rows="5" placeholder="How can we help?" required></textarea>
-        <button class="button" type="submit">Send</button>
-        <p class="notice">You can also email collinmoulaison@investfortheirfuture.com directly.</p>
+<section class="container">
+  <h1>Contact</h1>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Email</h3>
+      <p><a href="mailto:Info@investfortheirfuture.com">Info@investfortheirfuture.com</a></p>
+      <p><small>Or reach Collin directly: <a href="mailto:CollinMoulaison@investfortheirfuture.com">CollinMoulaison@investfortheirfuture.com</a>.</small></p>
+    </div>
+    <div class="card">
+      <h3>Subscribe</h3>
+      <form method="post" action="ZOHO_FORM_ACTION_URL_GOES_HERE">
+        <label for="cname">Name</label>
+        <input id="cname" name="name" type="text" required>
+        <label for="cemail">Email</label>
+        <input id="cemail" name="email" type="email" required>
+        <button class="btn" type="submit">Subscribe</button>
+        <small>Get the Starter Guide + 26‑email course (2 emails/week).</small>
       </form>
     </div>
     <div class="card">
-      <h3>Get the Starter Guide + Course</h3>
-      <p>Sign up to receive the PDF and the 13‑week, 26‑email course delivered twice a week.</p>
-      <form class="form" action="/signup" method="post">
-        <input class="input" type="text" name="name" placeholder="Your name" required>
-        <input class="input" type="email" name="email" placeholder="you@example.com" required>
-        <button class="button" type="submit">Subscribe</button>
-      </form>
+      <h3>Follow (placeholders)</h3>
+      <p>
+        <img src="/design/icons/x.svg" alt="X" width="22" height="22"> &nbsp;
+        <img src="/design/icons/tiktok.svg" alt="TikTok" width="22" height="22"> &nbsp;
+        <img src="/design/icons/linkedin.svg" alt="LinkedIn" width="22" height="22">
+      </p>
+      <small>Links to your profiles can go here when ready.</small>
     </div>
   </div>
 </section>
 
-
-<footer class="footer">
+<footer class="site-footer">
   <div class="container">
-    <p>© 2025 NestFund Financial. All rights reserved.</p>
-    <p class="disclaimer">This site is for education only. It is not financial advice. Talk with a licensed advisor before you invest.</p>
+    <p class="disclaimer">Education only — not financial advice. Talk with a licensed advisor before you invest. One Grand Accounts: eligibility begins Jan 1, 2025. Growth is tax‑deferred. Contributions may have limits. Rules can change.</p>
+    <p><small>&copy; 2025 NestFund Financial · investfortheirfuture.com</small></p>
   </div>
 </footer>
-
 </body></html>

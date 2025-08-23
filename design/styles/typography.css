@@ -1,0 +1,56 @@
+
+/* NestFund Typography & Components */
+:root{
+  --font-base: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-size-100: 0.875rem;
+  --font-size-200: 1rem;
+  --font-size-300: 1.125rem;
+  --font-size-400: 1.25rem;
+  --font-size-500: 1.5rem;
+  --font-size-600: 2rem;
+  --line: 1.5;
+  --brand: #0a66c2;
+  --ink: #111;
+  --bg-sky: #f7fbff;
+  --border: #e9eef5;
+}
+html { font-family: var(--font-base); font-size: 16px; }
+body { margin:0; color:var(--ink); line-height: var(--line); background:#fff; }
+h1 { font-size: var(--font-size-600); line-height:1.2; margin:0 0 .5rem; font-weight:700;}
+h2 { font-size: var(--font-size-500); line-height:1.25; margin:2rem 0 .75rem; font-weight:700;}
+h3 { font-size: var(--font-size-400); line-height:1.25; margin:1.5rem 0 .5rem; font-weight:700;}
+h4 { font-size: var(--font-size-300); line-height:1.25; margin:1rem 0 .5rem; font-weight:600;}
+p { margin:0 0 1rem; }
+a { color: var(--brand); text-decoration: underline; }
+a:hover, a:focus { text-decoration: none; }
+small { font-size: var(--font-size-100); color:#555; }
+
+.btn{
+  display:inline-block; padding:.625rem 1rem; border-radius:6px;
+  border:1px solid var(--brand); background:var(--brand); color:#fff;
+  text-decoration:none; font-weight:600; cursor:pointer; transition:transform .02s ease-in;
+}
+.btn.secondary{ background:#fff; color:var(--ink); border-color:#ddd; }
+.btn:active{ transform:scale(.99); }
+.badge{ display:inline-block; padding:.25rem .5rem; border:1px solid #ddd; border-radius:999px; font-size:.875rem; }
+
+header.site-header{ background:var(--bg-sky); border-bottom:1px solid var(--border); }
+.site-header .wrap{ max-width:1080px; margin:0 auto; padding:1rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;}
+.site-header nav a{ margin-right:1rem; text-decoration:none; color:#222; }
+.site-header nav a:hover{ text-decoration:underline; }
+
+.hero{ background:var(--bg-sky); border-bottom:1px solid var(--border);}
+.hero .wrap{ max-width:1080px; margin:0 auto; padding:1.25rem; display:grid; gap:1rem; grid-template-columns:1fr; }
+.hero .lead{ font-size: var(--font-size-300); color:#222; }
+.cta-row{ display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+.card{ border:1px solid #eee; border-radius:8px; padding:1rem; background:#fff; }
+
+.container{ max-width:1080px; margin:0 auto; padding:1rem; }
+.grid-3{ display:grid; gap:1rem; grid-template-columns:1fr; }
+footer.site-footer{ border-top:1px solid #eee; padding:1rem 0; margin-top:2rem; }
+.disclaimer{ color:#555; font-size:.9rem; }
+
+@media (min-width: 720px){
+  .hero .wrap{ grid-template-columns: 1.25fr .75fr; }
+  .grid-3{ grid-template-columns: repeat(3, 1fr); }
+}
