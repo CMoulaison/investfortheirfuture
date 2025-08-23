@@ -1,0 +1,22 @@
+
+/* NestFund layout + calculator + anchors */
+.anchor-nav{ display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0 1rem; }
+.anchor-nav a{ padding:.25rem .5rem; border:1px solid #ddd; border-radius:4px; text-decoration:none; color:#111;}
+.anchor-nav a:hover{ border-color:#111; }
+
+.calc-card{ border:1px solid #e5e5e5; border-radius:8px; padding:1rem; }
+.calc-grid{ display:grid; gap:1rem; grid-template-columns:1fr; }
+.calc-field label, .calc-field legend{ font-weight:600; }
+.calc-field input[type="number"]{ width:100%; padding:.5rem; border:1px solid #ccc; border-radius:4px; }
+.radio{ display:inline-flex; align-items:center; gap:.4rem; margin-right:1rem; }
+.calc-actions{ display:flex; gap:.5rem; margin:.5rem 0 1rem; flex-wrap:wrap; }
+.calc-results .result-cards{ display:grid; gap:1rem; grid-template-columns:1fr; }
+.result-card{ border:1px solid #f0f0f0; border-radius:6px; padding:.75rem; }
+.result-card .value{ font-size:1.5rem; font-weight:700; margin:.25rem 0; }
+.result-card .sub{ display:flex; justify-content:space-between; margin:.25rem 0; }
+.calc-note{ margin-top:.75rem; color:#444; font-size:.9rem; }
+
+@media (min-width: 640px){
+  .calc-grid{ grid-template-columns:1fr 1fr; }
+  .calc-results .result-cards{ grid-template-columns:1fr 1fr; }
+}
