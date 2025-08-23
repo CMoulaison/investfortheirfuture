@@ -1,39 +1,40 @@
-
 <form id="oga-calc-form" class="calc-card" novalidate aria-describedby="calc-note">
   <div class="calc-grid">
-    <div>
+    <div class="calc-field">
       <label for="weekly">Weekly contribution ($)</label>
-      <input class="input" id="weekly" name="weekly" type="number" step="1" min="0" value="50" inputmode="decimal" />
+      <input id="weekly" name="weekly" type="number" step="1" min="0" value="50" inputmode="decimal" />
     </div>
-    <fieldset>
-      <legend>Start age</legend>
-      <label><input type="radio" name="startAge" value="0" checked /> 0 (from birth)</label>
-      <label style="margin-left:1rem"><input type="radio" name="startAge" value="1" /> 1 (first birthday)</label>
-    </fieldset>
-    <div>
+    <div class="calc-field">
       <label for="rate">Annual return (%)</label>
-      <input class="input" id="rate" name="rate" type="number" step="0.1" min="0" value="7" inputmode="decimal" />
-      <div id="calc-note" class="notice">Assumes weekly compounding. Growth is tax‑deferred.</div>
+      <input id="rate" name="rate" type="number" step="0.1" min="0" value="7" inputmode="decimal" />
+      <small id="calc-note">Assumes weekly compounding.</small>
+    </div>
+    <div class="calc-field">
+      <label><input type="checkbox" id="seed" /> Include $1,000 seed</label><br/>
+      <label><input type="checkbox" id="cap" /> Enforce $5,000/yr cap</label>
     </div>
   </div>
-  <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0">
-    <button id="btn-reset" type="button" class="button secondary">Reset</button>
-    <button id="btn-copy" type="button" class="button">Copy link</button>
-    <button id="btn-csv" type="button" class="button">Download CSV</button>
+  <div class="calc-actions">
+    <button id="btn-reset" type="button" class="btn secondary">Reset</button>
+    <button id="btn-copy" type="button" class="btn">Copy link</button>
+    <button id="btn-csv" type="button" class="btn">Download CSV</button>
   </div>
-  <div class="grid two">
-    <div class="result-card">
-      <h4>Age 18</h4>
-      <div class="value" id="age18-value">$0.00</div>
-      <div><strong>Contributions:</strong> <span id="age18-contrib">$0.00</span></div>
-      <div><strong>Growth:</strong> <span id="age18-growth">$0.00</span></div>
+  <div class="calc-results" aria-live="polite">
+    <h3>Projected value</h3>
+    <div class="result-cards">
+      <div class="card">
+        <h4>Age 18</h4>
+        <p class="value" id="age18-value">$0.00</p>
+        <p class="sub"><span>Contributions:</span> <span id="age18-contrib">$0.00</span></p>
+        <p class="sub"><span>Growth:</span> <span id="age18-growth">$0.00</span></p>
+      </div>
+      <div class="card">
+        <h4>Age 60</h4>
+        <p class="value" id="age60-value">$0.00</p>
+        <p class="sub"><span>Contributions:</span> <span id="age60-contrib">$0.00</span></p>
+        <p class="sub"><span>Growth:</span> <span id="age60-growth">$0.00</span></p>
+      </div>
     </div>
-    <div class="result-card">
-      <h4>Age 60</h4>
-      <div class="value" id="age60-value">$0.00</div>
-      <div><strong>Contributions:</strong> <span id="age60-contrib">$0.00</span></div>
-      <div><strong>Growth:</strong> <span id="age60-growth">$0.00</span></div>
-    </div>
+    <p class="calc-note" id="summary-totals"></p>
   </div>
-  <p class="notice" id="summary-totals"></p>
 </form>
