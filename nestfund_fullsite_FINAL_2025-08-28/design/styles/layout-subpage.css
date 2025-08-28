@@ -1,0 +1,33 @@
+/* NestFund — Layout & Nav */
+.container{max-width:1080px;margin:0 auto;padding:1rem}
+.header{position:sticky;top:0;z-index:50;background:var(--nf-bg);border-bottom:1px solid var(--nf-line)}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;text-decoration:none;color:var(--nf-ink)}
+.brand img{height:28px;width:28px}
+.spacer{flex:1}
+nav.primary{display:none}
+.hamburger{background:transparent;border:0;font-size:1.6rem;padding:.4rem .6rem}
+.menu{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45)}
+.menu-panel{position:absolute;right:0;top:0;height:100%;width:min(85vw,360px);background:#fff;
+  padding:1rem 1.25rem;box-shadow:-8px 0 24px rgba(0,0,0,.2);overflow:auto}
+.menu a{display:block;padding:.8rem 0;color:var(--nf-ink);text-decoration:none;border-bottom:1px solid var(--nf-line)}
+.hero{display:grid;grid-template-columns:1fr;gap:1rem;padding:1.2rem 0}
+.cards{display:grid;grid-template-columns:1fr;gap:1rem}
+.card{border:1px solid var(--nf-line);border-radius:12px;padding:1rem;background:#fff}
+.grid-2{display:grid;grid-template-columns:1fr;gap:1rem}
+.footer{margin:2rem 0;padding:1.25rem 0;border-top:1px solid var(--nf-line)}
+.icon-row{display:flex;gap:.6rem;flex-wrap:wrap}
+.account-toggle{display:flex;gap:.5rem;flex-wrap:wrap}
+.account-toggle .btn{border-radius:999px;padding:.55rem .9rem;background:#fff;color:var(--nf-ink);border:1px solid var(--nf-line)}
+.account-toggle .btn.active{background:var(--nf-egg)}
+.cta-bar{display:flex;gap:.75rem;flex-wrap:wrap}
+.section-cta{margin-top:.5rem}
+/* Wider screens */
+@media(min-width:860px){
+  nav.primary{display:flex;gap:1rem}
+  .hamburger,.menu{display:none}
+  .hero{grid-template-columns:1.25fr .75fr;align-items:center}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:1fr 1fr}
+}
+/* Prevent sideways scroll on mobile */
+body{overflow-x:hidden}
