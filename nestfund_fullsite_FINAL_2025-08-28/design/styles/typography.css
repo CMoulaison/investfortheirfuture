@@ -1,0 +1,29 @@
+/* NestFund — Typography & Tokens */
+:root{
+  --nf-ink:#122230;      /* deep navy */
+  --nf-ink-2:#274457;    /* slate */
+  --nf-sea:#7fc6d5;      /* sea */
+  --nf-egg:#b9ead6;      /* mint */
+  --nf-sand:#efd3a0;     /* sand */
+  --nf-bg:#ffffff;
+  --nf-muted:#647381;
+  --nf-line:#eef2f4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--nf-bg);color:var(--nf-ink);
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;line-height:1.55}
+h1,h2,h3,h4{margin:.25rem 0 .5rem;letter-spacing:-.015em;font-weight:800}
+h1{font-size:clamp(2rem,3.3vw,3rem)}
+h2{font-size:clamp(1.4rem,2.4vw,2rem)}
+h3{font-size:clamp(1.2rem,2vw,1.6rem)}
+p{margin:.25rem 0 .9rem}
+a{color:var(--nf-ink-2);text-decoration:underline}
+small,.fine{color:var(--nf-muted);font-size:.92rem}
+.button,.btn{display:inline-block;background:var(--nf-ink);color:#fff;text-decoration:none;
+  padding:.75rem 1rem;border-radius:.75rem;font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.1);border:0;cursor:pointer}
+.btn.alt{background:var(--nf-sea);color:#0b2b36}
+.badge{display:inline-block;padding:.25rem .6rem;border-radius:.6rem;background:var(--nf-egg);color:#0b2b36;font-weight:700}
+hr{border:0;border-top:1px solid var(--nf-line);margin:1rem 0}
+ul{padding-left:1.1rem}
+code,kbd{background:#eef2f4;padding:.15rem .4rem;border-radius:.25rem}
+.input{padding:.7rem;border:1px solid var(--nf-line);border-radius:.5rem;width:100%}
