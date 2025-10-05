@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="NestFund mark">
+  <defs>
+    <style>
+      .a{fill:#4BA69A;stroke:#273B4A;stroke-width:2.5}
+      .b{fill:none;stroke:#273B4A;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect x="1.5" y="1.5" width="37" height="37" rx="10" class="a"/>
+  <path class="b" d="M13 25c4 4 10 4 14 0"/>
+  <path class="b" d="M15 22c3 3 7 3 10 0"/>
+  <path class="b" d="M20 12c3 0 5 5 5 8"/>
+</svg>
