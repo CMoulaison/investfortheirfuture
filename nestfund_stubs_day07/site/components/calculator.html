@@ -1,0 +1,51 @@
+<form id="oga-calc-form" class="calc-card" novalidate aria-describedby="calc-note">
+  <div class="calc-grid">
+    <div class="calc-field">
+      <label for="weekly">Weekly contribution ($)</label>
+      <input id="weekly" name="weekly" type="number" step="1" min="0" value="50" inputmode="decimal" aria-label="Weekly contribution in dollars" />
+    </div>
+
+    <fieldset class="calc-field">
+      <legend>Start age</legend>
+      <label class="radio">
+        <input type="radio" name="startAge" value="0" checked aria-label="Start at age zero" />
+        0 (from birth)
+      </label>
+      <label class="radio">
+        <input type="radio" name="startAge" value="1" aria-label="Start at age one" />
+        1 (first birthday)
+      </label>
+    </fieldset>
+
+    <div class="calc-field">
+      <label for="rate">Annual return (%)</label>
+      <input id="rate" name="rate" type="number" step="0.1" min="0" value="7" inputmode="decimal" aria-label="Annual return percent" />
+      <small id="calc-note">Assumes weekly compounding. Edit to test different scenarios.</small>
+    </div>
+  </div>
+
+  <div class="calc-actions">
+    <button id="btn-reset" type="button" class="btn secondary" aria-label="Reset calculator">Reset</button>
+    <button id="btn-copy" type="button" class="btn" aria-label="Copy link with settings">Copy link</button>
+    <button id="btn-csv" type="button" class="btn" aria-label="Download CSV with results">Download CSV</button>
+  </div>
+
+  <div class="calc-results" aria-live="polite">
+    <h3>Projected value</h3>
+    <div class="result-cards">
+      <div class="result-card">
+        <h4>Age 18</h4>
+        <p class="value" id="age18-value">$0.00</p>
+        <p class="sub"><span>Contributions:</span> <span id="age18-contrib">$0.00</span></p>
+        <p class="sub"><span>Growth:</span> <span id="age18-growth">$0.00</span></p>
+      </div>
+      <div class="result-card">
+        <h4>Age 60</h4>
+        <p class="value" id="age60-value">$0.00</p>
+        <p class="sub"><span>Contributions:</span> <span id="age60-contrib">$0.00</span></p>
+        <p class="sub"><span>Growth:</span> <span id="age60-growth">$0.00</span></p>
+      </div>
+    </div>
+    <p class="calc-note" id="summary-totals"></p>
+  </div>
+</form>
