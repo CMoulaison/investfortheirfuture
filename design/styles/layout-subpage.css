@@ -1,0 +1,7 @@
+/* Subpage extras */
+.explore-toggles{margin:.75rem 0 1rem}
+.hidden{display:none}
+.calc-card{border:1px solid #e5e5e5;border-radius:8px;padding:1rem}
+.calc-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.result-cards{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:640px){.calc-grid{grid-template-columns:1fr 1fr}.result-cards{grid-template-columns:1fr 1fr}}

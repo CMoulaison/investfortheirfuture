@@ -1,0 +1,1 @@
+(function(){const b=document.querySelector('.menu-btn');const p=document.querySelector('.menu-panel');if(!b||!p)return;b.addEventListener('click',()=>p.classList.toggle('open'));})();

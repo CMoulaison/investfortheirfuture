@@ -1,0 +1,35 @@
+/* Typography & layout */
+:root{--font-base:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--line:1.5}
+*{box-sizing:border-box}
+html{font-family:var(--font-base);font-size:16px}
+body{line-height:var(--line);color:#111;background:#fff;margin:0}
+.container{max-width:960px;margin:0 auto;padding:1rem}
+h1{font-size:2rem;margin:.25rem 0 .5rem;font-weight:700}
+h2{font-size:1.5rem;margin:1rem 0 .5rem;font-weight:700}
+h3{font-size:1.25rem;margin:.75rem 0 .5rem;font-weight:700}
+a{color:#0a66c2}
+.button,.btn{display:inline-block;padding:.625rem 1rem;border:1px solid #111;background:#111;color:#fff;text-decoration:none;border-radius:6px;font-weight:600;cursor:pointer}
+.button.secondary,.btn.secondary{background:#fff;color:#111}
+.page-header{display:grid;grid-template-columns:auto 1fr;gap:.5rem .75rem;align-items:center;margin:.5rem 0 1rem}
+.page-header p{grid-column:1 / -1}
+.disclaimer{margin-top:2rem;padding:1rem;border-top:1px solid #e5e5e5;color:#444;font-size:.9rem}
+.site-nav{display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem;border-bottom:1px solid #eee}
+.menu-btn{border:1px solid #111;background:#111;color:#fff;padding:.5rem .75rem;border-radius:6px;font-weight:600}
+.menu-panel{display:none}
+.menu-panel.open{display:block;padding:.5rem 0}
+.menu-panel a{display:block;padding:.5rem .75rem;text-decoration:none;border-radius:6px}
+.menu-panel a:hover{background:#f6f6f6}
+.cards{display:grid;gap:.75rem;grid-template-columns:1fr}
+.card{border:1px solid #eee;border-radius:8px;padding:.75rem;background:#fff}
+.toggle-buttons{display:flex;gap:.5rem;flex-wrap:wrap}
+.toggle-buttons .btn{border-width:2px}
+.toggle-buttons .btn.active{background:#fff;color:#111;border-color:#111}
+.info-box{border:2px solid #111;padding:.75rem;border-radius:8px;background:#fafafa}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+
+/* Topbar email capture */
+.topbar-capture{position:sticky;top:0;z-index:50;background:#111;color:#fff;padding:.5rem 1rem}
+.topbar-form{display:flex;gap:.5rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.topbar-form input[type=email]{padding:.5rem .6rem;border-radius:6px;border:1px solid #333;min-width:220px}
+.topbar-form .btn{background:#fff;color:#111;border-color:#fff}
+.topbar-msg{font-size:.95rem}
