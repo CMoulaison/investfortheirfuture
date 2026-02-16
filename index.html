@@ -1,107 +1,74 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home • NestFund</title>
-<link rel="stylesheet" href="/design/styles/theme.css">
-<link rel="stylesheet" href="/design/styles/calculator.css">
-</head><body class="tap-large">
-
-<header class="header">
-  <div class="container nav">
-    <a href="/index.html" class="logo" aria-label="NestFund home"><span class="dot"></span> NestFund</a>
-    <nav class="menu" aria-label="Main">
-      <a href="/site/pages/one-grand-account.html">One Grand Account</a>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Build wealth for kids · NestFund Financial</title>
+<link rel="stylesheet" href="/design/styles/typography.css">
+<link rel="stylesheet" href="/design/styles/layout-subpage.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a href="/"><strong>NestFund</strong></a>
+    <nav aria-label="Main">
+      <a href="/site/pages/one-grand-accounts.html">One Grand Accounts</a>
       <a href="/site/pages/529-plans.html">529 Plans</a>
       <a href="/site/pages/custodial-accounts.html">Custodial</a>
-      <a href="/site/pages/glossary.html">Glossary</a>
       <a href="/site/pages/about.html">About</a>
       <a href="/site/pages/contact.html">Contact</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Toggle menu"><span></span></button>
-  </div>
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="/site/pages/one-grand-account.html">One Grand Account</a>
-    <a href="/site/pages/529-plans.html">529 Plans</a>
-    <a href="/site/pages/custodial-accounts.html">Custodial</a>
-    <a href="/site/pages/glossary.html">Glossary</a>
-    <a href="/site/pages/about.html">About</a>
-    <a href="/site/pages/contact.html">Contact</a>
   </div>
 </header>
-<script>
-  (function(){
-    var b=document.getElementById('burger');
-    var root=document.documentElement;
-    if(!b) return;
-    b.addEventListener('click',function(){ root.classList.toggle('mobile-open'); });
-  })();
-</script>
-
 
 <section class="hero">
-  <div class="container">
-    <span class="kicker">Financial education for real families</span>
-    <h1>Build Wealth for Their Future — Starting Today</h1>
-    <p>NestFund helps parents and grandparents set up One Grand Accounts, 529 Plans, and Custodial Accounts with simple tools and plain‑language guides.</p>
-    <div class="big-cta">
-      <a class="button" href="#signup">Start Here – Free Starter Guide + 13‑Week Email Course</a>
+  <div class="wrap">
+    <div>
+      <h1>Build wealth for kids — starting at birth</h1>
+      <p class="lead">We’re a financial education project. We help families understand <strong>One Grand Accounts</strong>, <strong>529 plans</strong>, and <strong>custodial accounts</strong> with simple tools and plain‑language guides.</p>
+      <div class="cta-row">
+        <a class="btn" href="/docs/starter-guide.pdf">Download the Free Starter Guide</a>
+        <a class="btn secondary" href="/site/pages/one-grand-accounts.html">Explore Accounts</a>
+      </div>
+      <p><span class="badge">Free 26‑email course</span> You’ll also get 2 emails per week for 13 weeks covering the basics.</p>
     </div>
-  </div>
-</section>
-
-<section class="section" id="signup">
-  <div class="container card">
-    <h2>Get the Starter Guide + 13‑Week Email Course</h2>
-    <p>Twice‑a‑week lessons for 13 weeks (26 total). Clear steps. No jargon. Built for busy parents.</p>
-    <form class="form" action="/signup" method="post">
-      <input class="input" type="text" name="name" placeholder="Your name" required>
-      <input class="input" type="email" name="email" placeholder="you@example.com" required>
-      <button class="button" type="submit">Send me the guide and course</button>
-      <p class="notice">We never sell your data.</p>
+    <form class="card" method="post" action="ZOHO_FORM_ACTION_URL_GOES_HERE" aria-label="Subscribe for starter guide and course">
+      <h3>Get the guide + course</h3>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+      <button class="btn" type="submit">Send me the guide</button>
+      <small>We’ll email the PDF and start the course. Unsubscribe anytime.</small>
     </form>
   </div>
 </section>
 
-<section class="section">
-  <div class="container grid three">
+<section class="container">
+  <h2>Start here — three steps</h2>
+  <div class="grid-3">
     <div class="card">
-      <img class="icon" src="/design/icons/oga.svg" alt="One Grand Account icon">
-      <h3>One Grand Account</h3>
-      <p>For children born on or after January 1, 2025. $1,000 seed. Up to $5,000 per year. Growth is tax‑deferred.</p>
-      <a class="button secondary" href="/site/pages/one-grand-account.html">Learn more</a>
+      <h3>1) Pick an account</h3>
+      <p>One Grand Account, 529, or Custodial — see which fits your situation.</p>
+      <a class="btn secondary" href="/site/pages/one-grand-accounts.html">Compare options</a>
     </div>
     <div class="card">
-      <img class="icon" src="/design/icons/529.svg" alt="529 plan icon">
-      <h3>529 Plans</h3>
-      <p>State‑sponsored education accounts with tax advantages for qualified costs.</p>
-      <a class="button secondary" href="/site/pages/529-plans.html">Learn more</a>
+      <h3>2) Run the calculator</h3>
+      <p>See how weekly deposits can grow by age 18 — and age 60 for the long view.</p>
+      <a class="btn secondary" href="/site/pages/one-grand-accounts.html#calculator">Open calculator</a>
     </div>
     <div class="card">
-      <img class="icon" src="/design/icons/custodial.svg" alt="Custodial account icon">
-      <h3>Custodial Accounts</h3>
-      <p>UTMA/UGMA and Roth IRA for minors. Flexible investing under adult supervision.</p>
-      <a class="button secondary" href="/site/pages/custodial-accounts.html">Learn more</a>
+      <h3>3) Set up autopay</h3>
+      <p>Start small. Even <strong>$20/week</strong> adds up with time and consistency.</p>
+      <a class="btn secondary" href="/docs/starter-guide.pdf">Read the guide</a>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container card">
-    <h2>Start Here in 3 Simple Steps</h2>
-    <ol>
-      <li>Get the free Starter Guide (PDF) and 13‑week email course.</li>
-      <li>Commit to a weekly deposit (even $10–$25) and set it on autopilot.</li>
-      <li>Explore the account pages and use the calculator to track growth.</li>
-    </ol>
-    <a class="button" href="#signup">Get Guide + Course</a>
-  </div>
-</section>
-
-
-<footer class="footer">
+<footer class="site-footer">
   <div class="container">
-    <p>© 2025 NestFund Financial. All rights reserved.</p>
-    <p class="disclaimer">This site is for education only. It is not financial advice. Talk with a licensed advisor before you invest.</p>
+    <p class="disclaimer">Education only — not financial advice. Talk with a licensed advisor before you invest. One Grand Accounts: eligibility begins Jan 1, 2025. Growth is tax‑deferred. Contributions may have limits. Rules can change.</p>
+    <p><small>&copy; 2025 NestFund Financial · investfortheirfuture.com</small></p>
   </div>
 </footer>
-
 </body></html>
